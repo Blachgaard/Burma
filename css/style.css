@@ -43,7 +43,7 @@ a:hover
   display: block;
   position: relative;
   top: 15px;
-  left: 50px;
+  margin-left: 50px;
   
   z-index: 1;
 }
@@ -63,6 +63,7 @@ a:hover
   z-index: 2;
 
 }
+
 #menuToggle span
 {
   display: block;
@@ -92,39 +93,22 @@ a:hover
 {
   transform-origin: 0% 100%;
 }
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -169,7 +153,40 @@ h2{
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
+    margin-bottom:5%;
 }
+
+/*rejser*/
+.rejseinfo{
+    margin:5%;
+    
+}
+.18dage{
+    left:0px;
+    width:35%;
+    margin:5px;
+}
+.12dage{
+    right:0px;
+    width:35%%
+}
+.rejseliste{
+    margin-left:15%;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+.rejsebilled{
+    display:block;
+    width:89%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin:5%;
+}
+.margin{
+    margin:5%;
+}
+
 /*footer*/
 footer {
     position:relative;
@@ -187,10 +204,28 @@ footer {
     font-size: 18px;
     margin:2%
 }
+.dagsprogram{
+    padding:1%;
+    margin:2%;
+    margin-left:10%;
+    margin-right:10%;
+    text-align: center;
+    background-color:darkkhaki;
+}
 
 /*TABLET*/
 @media (min-width: 768px){
-    
+    .rejseinfo{
+        display:flex;
+    }
+    .18dage{
+    left:0px;
+    width:40%;
+}
+.12dage{
+    right:0px;
+    width:40%%
+}
 }
 
     
