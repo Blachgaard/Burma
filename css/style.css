@@ -9,6 +9,7 @@ header {
     background: black;
     width:100%;
     height:100px;
+    margin-bottom:50px;
 }
 
 .top {
@@ -136,6 +137,9 @@ a:hover
 {
   transform: none;
 }
+#menu2{
+    visibility: hidden;
+}
 /*content*/
 .contentbox{
     text-align: center;
@@ -148,13 +152,25 @@ h2{
     margin:5%;
 
 }
-.billed{
+h3{
+    margin-left:10%;
+}
+.topbilled{
     width:100%;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     margin-bottom:5%;
 }
+.billed{
+    width:100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom:5%;
+    margin-top:5%;
+}
+
 
 /*rejser*/
 .rejseinfo{
@@ -202,7 +218,8 @@ footer {
     top: 8px;
     left: 16px;
     font-size: 18px;
-    margin:2%
+    margin:2%;
+    display:none;
 }
 .dagsprogram{
     padding:1%;
@@ -226,6 +243,44 @@ footer {
     right:0px;
     width:40%%
 }
+    .logo{
+        display:block;
+    }
+    #menu1 {
+        visibility: hidden;
+    }
+/*Menu2*/
+    #menu2{
+        visibility: visible;
+        margin-top:50px;
+       
+    }
+   nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#menu2 li {
+    float: left;
+}
+
+#menu2 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+    h3{
+        margin-top:70px;
+    }
 }
 
     
