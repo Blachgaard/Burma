@@ -200,10 +200,13 @@ h3{
     margin:5%;
 }
 .venstre{
-    visibility: hidden;
+    display:none;
 }
-
-/*rejser*/
+.infotext{
+    margin:5%;
+    text-align: justify;
+    
+}
 .rejseinfo{
     margin:5%;
     text-align: justify
@@ -289,7 +292,14 @@ footer {
         width:45%;
         margin-right:10%;
         left:0px;
-        visibility: visible;
+        display:block;
+        margin-left:0;
+    }
+    .hoejre{
+        margin-right: 5%;
+    }
+    .rejsebilled{
+        
     }
     .logo{
         display:block;
@@ -301,7 +311,6 @@ footer {
     #menu2{
         visibility: visible;
         margin-top:50px;
-       
     }
    nav ul {
     list-style-type: none;
