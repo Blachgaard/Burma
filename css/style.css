@@ -1,20 +1,23 @@
 /*GLOBAL*/
-*{
-    margin:0px;
-    padding:0px;
+
+* {
+    margin: 0px;
+    padding: 0px;
     font-family: "Avenir Next", "Avenir", sans-serif;
 }
+
 /*header*/
+
 header {
     background: black;
-    width:100%;
-    height:100px;
-    margin-bottom:50px;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
 }
 
 .top {
     position: relative;
-    padding-top:25px
+    padding-top: 25px
 }
 
 .center {
@@ -23,330 +26,342 @@ header {
     top: 50%;
     width: 100%;
     text-align: center;
-    transform:(-50%, -50%);
+    transform: (-50%, -50%);
 }
+
 /*burgermenu*/
-a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
+
+a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
 }
 
-a:hover
-{
-  color: tomato;
+a:hover {
+    color: tomato;
 }
 
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 15px;
-  margin-left: 30px;
-  
-  z-index: 1;
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 15px;
+    margin-left: 30px;
+
+    z-index: 1;
 }
 
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0;
-  z-index: 2;
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
 
 }
 
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
 }
 
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s;
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
 }
 
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ul
-{
-  transform: none;
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
 }
-#menu2{
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s;
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+#menu2 {
     visibility: hidden;
 }
+
 /*content*/
-.contentbox{
+
+.contentbox {
     text-align: center;
-    margin-left:5%;
-    margin-right:5%;
+    margin-left: 5%;
+    margin-right: 5%;
     text-align: justify;
 }
-h2{
+
+h2 {
     text-align: center;
-    margin:5%;
+    margin: 5%;
 
 }
-h3{
-    margin-left:10%;
+
+h3 {
+    margin-left: 10%;
 }
-.topbilled{
-    width:88%;
+
+.topbilled {
+    width: 88%;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    margin-bottom:5%;
-    margin-left:5%;
-    margin-right:5%;
-    
-    
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+
 }
-.billed{
-    width:100%;
+
+.billed {
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    margin-bottom:5%;
-    margin-top:5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
-.rejselederbox{
-    text-align: center;
-    margin-left:5%;
-    margin-right:5%;
+
+.rejselederbox {
+
+    margin-left: 5%;
+    margin-right: 5%;
     text-align: justify;
+
 }
-.rejseleder{
-        display:flex;
+
+.rejseleder {
+    display: flex;
 }
-.indexbox{
-    
-    margin-right:40px;
-    
+
+.indexbox {
+
+    margin-right: 40px;
+
+
 }
-.indexbilled{
-      right:0px;
+
+.indexbilled {
+    right: 0px;
+    width: 100%;
 }
-.infobilled{
-    display:block;
-    width:89%;
+
+.infobilled {
+    display: block;
+    width: 89%;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    margin:5%;
+    margin: 5%;
 }
-.venstre{
-    display:none;
+
+.venstre {
+    display: none;
 }
-.infotext{
-    margin:5%;
+
+.infotext {
+    margin: 5%;
     text-align: justify;
-    
+
 }
-.rejseinfo{
-    margin:5%;
+
+.rejseinfo {
+    margin: 5%;
     text-align: justify
-    
 }
-.rejseliste{
-    margin-left:15%;
-    margin-top:5%;
-    margin-bottom:5%;
+
+.rejseliste {
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
-.rejsebilled{
-    display:block;
-    width:89%;
+
+.rejsebilled {
+    display: block;
+    width: 89%;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    margin:5%;
+    margin: 5%;
 }
-.margin{
-    margin:5%;
+
+.margin {
+    margin: 5%;
 }
 
 /*footer*/
+
 footer {
-    position:relative;
+    position: relative;
     background: black;
-    width:100%;
-    height:200px;
-    color:white;
+    width: 100%;
+    height: 200px;
+    color: white;
     text-align: center;
-    padding-top:5%;
-    margin-top:5%;
+    padding-top: 5%;
+    margin-top: 5%;
 }
-.logo{
+
+.logo {
     position: absolute;
     top: 8px;
     left: 16px;
     font-size: 18px;
-    margin:2%;
-    display:none;
+    margin: 2%;
+    display: none;
 }
-.dagsprogram{
-    padding:1%;
-    margin:2%;
-    margin-left:10%;
-    margin-right:10%;
+
+.dagsprogram {
+    padding: 1%;
+    margin: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
-    background-color:darkkhaki;
+    background-color: darkkhaki;
 }
 
 /*TABLET*/
-@media (min-width: 768px){
-    .rejseinfo{
-        display:flex;
+
+@media (min-width: 768px) {
+    .rejseinfo {
+        display: flex;
     }
-    
-    .contentbox{
-        display:flex;
+
+    .contentbox {
+        display: flex;
     }
-    .dage18{
-      width:45%;
-          margin-right:10%;
-}
-.dage12{
-   width:45%;
-}
-    .billed{
-        right:0px;
-        width:40%
+    .dage18 {
+        width: 45%;
+        margin-right: 10%;
     }
-    .introtext{
-        width:40%%;
-        left:0px;
-        margin-right:20px;
+    .dage12 {
+        width: 45%;
     }
-    .indexbilled{
-        width:80%;
+    .billed {
+        right: 0px;
+        width: 40%
     }
-    .infobilled{
-        width:100%;
+    .introtext {
+        width: 40%%;
+        left: 0px;
+        margin-right: 20px;
     }
-    .venstre{
-        width:45%;
-        margin-right:10%;
-        left:0px;
-        display:block;
-        margin-left:0;
+    .indexbilled {
+        width: 80%;
     }
-    .hoejre{
+    .infobilled {
+        width: 100%;
+    }
+    .venstre {
+        width: 45%;
+        margin-right: 10%;
+        left: 0px;
+        display: block;
+        margin-left: 0;
+    }
+    .hoejre {
         margin-right: 5%;
     }
-    .rejsebilled{
-        
-    }
-    .logo{
-        display:block;
+    .rejsebilled {}
+    .logo {
+        display: block;
     }
     #menu1 {
         visibility: hidden;
     }
-/*Menu2*/
-    #menu2{
+    /*Menu2*/
+    #menu2 {
         visibility: visible;
-        margin-top:50px;
+        margin-top: 50px;
     }
-   nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
 
-#menu2 li {
-    float: left;
-}
+    #menu2 li {
+        float: left;
+    }
 
-#menu2 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+    #menu2 li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
 
-li a:hover {
-    background-color: #111;
-}
-    h3{
-        margin-top:70px;
+    li a:hover {
+        background-color: #111;
+    }
+    h3 {
+        margin-top: 70px;
     }
 }
 
-    
+
 /*LAPTOP*/
-@media (min-width: 1024x){
 
-}
+@media (min-width: 1024x) {}
 
 /*DESTOP*/
-    @media (min-width: 1600px){
-        
-}
+
+@media (min-width: 1600px) {}
